@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../o1/jss/utilfnc.js"></script>
+	
+	<script type="text/javascript">
+	function handleClick ()
+	{
+		var session = document.getElementById( "ipSession" ).value;
+		//var lb = document.getElementById( "lowbw" ).checked;
+		//var lbv = "0";
+		//if ( lb == true )
+		//{
+		//	lbv = "1";
+		//}
+		// set a cookie with the entered values
+		//console.log( "setting cookies session=%s, lowbandwidth=%s", session, lbv );
+
+		setCookie( "session", session );
+		//setCookie( "lowbw", lbv );
+
+		window.location.href = "drpz.html";
+		return true; // prevent further bubbling of event
+	}
+	</script>
+</head>
+<body>
+
+<p style="text-align:center;">
+<img src="ONC_Logo.png" alt="Omnitivity" style="width:100px;height:100px;">
+</p>
+<form action="javascript:handleClick()">
+  <div style="margin-top:100px;" align="center">
+	<font family="Open Sans" size="14px" color="#4b6777">Create Session<br>
+	<input type="text" style="font-size:24px;" id="ipSession" name="Session ID" value="">
+	<br>
+   <br>
+	<input type="submit" value="Start Session" style="width:250px; height:60px; 
+		font-face:Open Sans; font-size:14px; color:#4b6777;">  	
+	<br>
+  	</font>
+  	<br><br>
+  	<!-- input type="checkbox" id="lowbw" name="lowbw" value="lowbw">
+   <label for="lowbw" style="font-size:16px">Use Low Bandwidth?</label-->
+	<br><br><br>
+  </div>
+</form> 
+
+<p style="text-align:center;">
+	<font face="Open Sans" size="14px" color="#4b6777">
+	Powered by Oncierge<br>
+	Demo Only. Not for Commercial Use</font>
+  	<!-- font size="4px" color="black">&copy 2017-</font -->
+</p>
+
+
+</body>
+</html>

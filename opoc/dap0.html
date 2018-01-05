@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="o-dap.js"></script>
+	
+	<script type="text/javascript">
+	function handleClick ()
+	{
+		var session = document.getElementById( "ipSession" ).value;
+		var name = document.getElementById( "ipName" ).value; //"client";
+		// set a cookie with the entered values
+		console.log( "setting cookies %s %s", session, name );
+		setCookie( "session", session );
+		setCookie( "name", name );
+		//name = getCookie( "name" );
+		//session = getCookie( "session" );
+		//console.log( "got cookies %s %s", session, name );
+		//var cks = document.cookie;
+		//console.log( "Values are %s ", cks );
+		window.location.href = "dap.html";
+		return true; // prevent further bubbling of event
+	}
+	</script>
+</head>
+<body>
+
+<p style="text-align:center;">
+	<img src="ONC_Logo.png" alt="Omnitivity" style="width:100px;height:100px;">
+</p>
+
+<form action="javascript:handleClick()">
+  <div style="margin-top:100px;" align="center">
+	<font family="Open Sans" size="14px" color="#4b6777">Name<br>
+		<input type="text" style="font-size:24px;" id="ipName" name="Name" value="">
+	<br>Password<br>
+		<input type="text" style="font-size:24px;" id="ipSession" name="Session ID" value="">
+	<br>
+	<input type="submit" value="Join Doctor" style="width:250px; height:60px; 
+		font-face:Open Sans; font-size:14px; color:#4b6777;">
+  <br><br><br><br>
+  </font>
+  </div>
+</form> 
+	
+<p style="text-align:center;">
+	<font face="Open Sans" size="14px" color="#4b6777">
+	Powered by Oncierge<br>
+	Demo Only. Not for Commercial Use</font>
+  	<!-- font size="4px" color="black">&copy 2017-</font -->
+</p>
+
+</body>
+</html>
